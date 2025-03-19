@@ -32,7 +32,11 @@ dofile(vim.g.base46_cache .. "statusline")
 require "options"
 require "nvchad.autocmds"
 
-
+if vim.g.neovide then
+  vim.o.guifont = "FiraMono Nerd Font Mono:h10"
+end
+vim.wo.number = true
+vim.wo.relativenumber = true
 vim.schedule(function()
   require "mappings"
 end)
